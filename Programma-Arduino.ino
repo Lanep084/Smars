@@ -36,30 +36,7 @@ void loop() {
        Serial.println("---------------"); 
        Serial.print(readString);       // stampa la stringa sulla porta seriale in uscita  
     
-       int n1; 
-       int n2; 
-    
-   // separa la stringa che riceve dal buffer seriale in diverse sottostringhe
-       action = readString.substring(0, 1); 
-       Lspeed = readString.substring(1, 4); 
-       Rspeed = readString.substring(4, 7);
-     
-       Serial.println(action); 
-       Serial.println(Lspeed); 
-       Serial.println(Rspeed); 
-    
-    char carray1[7];                                // dichiarando l'array di caratteri
-    Lspeed.toCharArray(carray1, sizeof(carray1));   // passando il valore della stringa all'array di caratteri
-    n1 = atoi(carray1);                             // convertire char/string in un valore intero 
-    
-    char carray2[7]; 
-    Rspeed.toCharArray(carray2, sizeof(carray2)); 
-    n2 = atoi(carray2); 
-    
-    Serial.println(n1);                             // stampa il valore intero n1 sulla porta seriale in uscita
-    Serial.println(n2);                             // stampa il valore intero n2 sulla porta seriale in uscita 
-    
-    readString = ""; 
+       
     
     // avanti 
     if(action.equals("F")){ 
