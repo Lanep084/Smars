@@ -9,7 +9,6 @@ AF_DCMotor MotorR(2);                   // definire il motore destro come Motore
 
 const int buzPin = 7;                   // settare il pin digitale 7 come buzPin (attiva il buzzer)
 
-String readString, action, Lspeed, Rspeed, actionDelay, stopDelay; // dichiarare le stringhe multiple
 
 void setup(){ 
   Serial.begin(115200);                 // settare la velocità della Seriale a 115200 bps                                        
